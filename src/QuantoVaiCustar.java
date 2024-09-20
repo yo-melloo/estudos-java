@@ -1,7 +1,7 @@
 public class QuantoVaiCustar {
     public static void main(String[] args) {
 
-        double precoProduto = 39.99;
+        double precoProduto = 79.99;
         int quantidade = 4;
 
         double precoFinal = precoProduto * quantidade;
