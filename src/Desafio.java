@@ -13,7 +13,7 @@ public class Desafio {
         // 1. Inicializar dados do cliente
                 String nome = "Gustavo";
         String tipoDeConta = "Poupança";
-        double usuarioSaldo = 0;
+        double usuarioSaldo = 100;
 
         System.out.println(linhax);
         System.out.println("Dados do Cliente\n");
@@ -53,7 +53,15 @@ public class Desafio {
 
                 System.out.println(linhax);
                 System.out.println("Chave de recebimento: xxxx-xxxx/xxx.xx");
+                System.out.println(linhai);
+                System.out.print("Qual valor deseja receber? > R$ ");
+                double valorRecebido = entrada.nextDouble();
+
+                System.out.printf("%n** Recebido R$ %.2f **%n", valorRecebido);
+                System.out.printf("Saldo: R$ %.2f ---> R$ %.2f %n", usuarioSaldo, (usuarioSaldo + valorRecebido));
+                usuarioSaldo = valorRecebido;
                 System.out.println(linhax);
+
                 break;
             } else if (usuarioEscolha == 3) {
                 // 4. Envia valor
