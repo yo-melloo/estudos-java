@@ -40,15 +40,14 @@ public class Desafio {
 
             System.out.println("\n--> Opção selecionada:");
             if (usuarioEscolha == 1){ // 3. Visualização de saldo
-
                 System.out.println("* 1. Consultar saldos\n");
 
                 System.out.println(linhax);
                 System.out.printf("Saldo em conta: R$ %.2f %n",usuarioSaldo);
                 System.out.println(linhax);
                 break;
-            } else if (usuarioEscolha == 2) { // 5. Recebe valor
 
+            } else if (usuarioEscolha == 2) { // 5. Recebe valor
                 System.out.println("* 2. Receber valor\n");
 
                 System.out.println(linhax);
@@ -59,13 +58,27 @@ public class Desafio {
 
                 System.out.printf("%n** Recebido R$ %.2f **%n", valorRecebido);
                 System.out.printf("Saldo: R$ %.2f ---> R$ %.2f %n", usuarioSaldo, (usuarioSaldo + valorRecebido));
-                usuarioSaldo = valorRecebido;
+                usuarioSaldo += valorRecebido;
                 System.out.println(linhax);
+                break;
 
+            } else if (usuarioEscolha == 3) { // 4. Envia valor
+                System.out.println("* 3. Transferir valor\n");
+
+                System.out.println(linhax);
+                System.out.print("Chave de recebimento: ");
+                String depositoConta = entrada.next();
+                System.out.println(linhai);
+
+                System.out.print("Qual valor deseja enviar? > R$ ");
+                double depositoValor = entrada.nextDouble();
+                System.out.println(linhai);
+                System.out.printf("%n** Valor enviado para %s! ** %n", depositoConta);
+                System.out.printf("Saldo: R$ %.2f ---> R$ %.2f %n", usuarioSaldo, (usuarioSaldo - depositoValor));
+                usuarioSaldo -= depositoValor;
+                System.out.println(linhax);
                 break;
-            } else if (usuarioEscolha == 3) {
-                // 4. Envia valor
-                break;
+
             } else if (usuarioEscolha == 4) {
                 System.out.println("* 4. Sair");
                 break;
