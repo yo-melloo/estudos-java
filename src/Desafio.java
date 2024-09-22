@@ -41,6 +41,11 @@ public class Desafio {
             System.out.println("\n--> Opção selecionada:");
             if (usuarioEscolha == 1){
                 // 3. Visualização de saldo
+                System.out.println("* 1. Consultar saldos\n");
+
+                System.out.println(linhax);
+                System.out.printf("Saldo em conta: R$ %.2f %n",usuarioSaldo);
+                System.out.println(linhax);
                 break;
             } else if (usuarioEscolha == 2) {
                 // 5. Recebe valor
